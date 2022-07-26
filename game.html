@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>Random Number Guesser</title>
+        <style>
+            h1 {
+                text-align:center
+            }
+            p {
+                text-align:center
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Click the button below to start the game!</h2>
+        <div style = "text-align:center">
+        <button style = "button" onclick = "Game()">Start!</button>
+        </div>
+    </body>
+    <script>
+        function Game() {
+            var number = Math.floor(Math.random()*10);
+            var guess = prompt("I'm thinking of a number between 0 and 10, try to guess it.");
+            if (guess == number) {
+                alert("Correct! The number I was thinking of was " + number);
+            }
+            else {
+                alert("Incorrect, the number I was thinking of was " + number);
+            }
+        }
+    </script>
+ </html>
